@@ -14,3 +14,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.form-container,
+.table-container {
+  width: 50vw;
+  margin: auto;
+}
+
+.error-message {
+  color: rgb(230, 20, 20);
+  font-size: 14pt;
+}
