@@ -12,11 +12,11 @@ function ClientsTableComponent(): JSX.Element {
 
     useEffect(() => {
         if(filterState) {
-            setClientsDataState(clientsDataState.filter(cd => cd.name.includes(filterState)))
+            setClientsDataState(c => c.filter(cd => cd.name.includes(filterState)))
         } else {
             setClientsDataState(Object.values(localStorage).map(cd => JSON.parse(cd) as ClientData));
         };
-    }, [filterState, editState, formState, setClientsDataState])
+    }, [filterState, editState, formState])
 
     function allowClientDataEdition(clientData: ClientData) {
         localStorage.removeItem(clientData.cpf);
