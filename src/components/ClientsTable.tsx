@@ -16,7 +16,7 @@ function ClientsTableComponent(): JSX.Element {
         } else {
             setClientsDataState(Object.values(localStorage).map(cd => JSON.parse(cd) as ClientData));
         };
-    }, [filterState, editState, formState])
+    }, [filterState, editState, formState, setClientsDataState])
 
     function allowClientDataEdition(clientData: ClientData) {
         localStorage.removeItem(clientData.cpf);
